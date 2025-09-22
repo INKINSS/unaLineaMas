@@ -1,21 +1,27 @@
+---
+import Background from "../components/background/Background.astro"
+import Header from "../components/header/Header.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/src//styles/global.css">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>unaLineaMas</title>
 	</head>
 	<body>
+        <Header />
+        <Background />
 		<slot />
 	</body>
 </html>
 
 <style is:global>
     *{
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
     }
 	html,
