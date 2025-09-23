@@ -1,7 +1,14 @@
 ---
-
+import NavLink from '@/components/common/navLink/NavLink.astro'
 ---
 
-<header class="p-4">
-    <h3 class="text-slate-950 font-medium text-sm">unaLineaMas</h3>
+<header class="flex justify-between p-4">
+    <h3 class="text-customGray font-medium text-sm">unaLineaMas</h3>
+    <nav>
+        <ul class="flex flex-col items-end font-medium gap-1 text-customGray">
+            <li><NavLink exact href="/" activeClass='opacity-100 underline-offset-4 underline' class='text-grayLight opacity-70 hover:underline-offset-4 hover:underline'>inicio</NavLink></li>
+            <li><NavLink href="/articles" activeClass='opacity-100' class='text-grayLight opacity-60 hover:underline-offset-4 hover:underline'>articulos</NavLink></li>
+            <li><NavLink href="/contributing" activeClass='opacity-100' class='text-grayLight opacity-60 hover:underline-offset-4 hover:underline'>CONTRIBUTING.md</NavLink></li>
+        </ul>
+    </nav>
 </header>
