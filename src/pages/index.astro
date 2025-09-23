@@ -1,6 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import PrimaryButton from "../components/common/buttons/PrimaryButton.astro";
+import SecundaryButton from "@/components/common/buttons/SecundaryButton.astro";
 ---
 
 <Layout>
+  <main class="flex flex-col items-center justify-center h-[60dvh] leading-9 lg:leading-12">
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="font-semibold text-[2rem] lg:text-[3rem]">Explorando el mundo</h1>
+      <h1 class="text-main-gray font-semibold text-[2rem] lg:text-[3rem]">
+        una línea a la vez
+      </h1>
+      <p
+        class="w-[95%] mt-2 text-center text-sm lg:text-base font-regular font-roboto tracking-tight text-balance prose prose-p:grayExtraLight"
+      >
+        un lugar donde puedes aprender sobre temas interesantes de programacion,
+        desarrollo todo en una linea mas
+      </p>
+    </div>
+    <div class="flex items-center justify-center mt-4 gap-3">
+      <PrimaryButton>una linea mas</PrimaryButton>
+      <SecundaryButton>contribuir</SecundaryButton>
+    </div>
+  </main>
 </Layout>
