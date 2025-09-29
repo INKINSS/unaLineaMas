@@ -1,6 +1,7 @@
 ---
 import Background from "../components/background/Background.astro"
 import Header from "../components/header/Header.astro"
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -12,8 +13,9 @@ import Header from "../components/header/Header.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>unaLineaMas</title>
+		<ClientRouter />
 	</head>
-	<body>
+	<body class="p-6">
         <Header />
         <Background />
 		<slot />
