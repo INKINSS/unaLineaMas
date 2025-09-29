@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  isBlack?: boolean;
+  aling?: "left" | "right";
+}
+
+const { title, isBlack, aling } = Astro.props;
+
+// función para decidir alineación
+const textAlign =
+  aling === "left"
+    ? "text-start justify-start"
+    : aling === "right"
+    ? "text-end items-end"
+    : "text-center items-center";
+---
+
+<section class={`${isBlack ? "bg-gray" : "bg-transparent"} ${textAlign} flex flex-col py-5 px-5`}>
+  <h2
+    class={`${isBlack ? "text-white" : "text-gray"} ${textAlign} font-semibold text-[1.3rem] md:leading-8`}
+  >
+    {title}
+  </h2>
+  <p
+    class={`${isBlack ? "text-grayExtraLight" : "text-grayLight"} ${textAlign} w-full mt-1 text-sm lg:text-base font-regular font-roboto text-balance prose`}
+  >
+    <slot />
+  </p>
+</section>
