@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import PrimaryButton from "../components/common/buttons/PrimaryButton.astro";
 import SecundaryButton from "@/components/common/buttons/SecundaryButton.astro";
+import BlockSection from "@/components/blockSection/BlockSection.astro";
 ---
 
 <Layout>
-  <main class="flex flex-col items-center justify-center h-[60dvh] leading-9 lg:leading-12">
+  <main class="flex flex-col items-center justify-center leading-9 lg:leading-12 mt-18">
     <div class="flex flex-col items-center justify-center">
       <h1 class="font-semibold text-[2rem] lg:text-[3rem]">Explorando el mundo</h1>
       <h1 class="text-main-gray font-semibold text-[2rem] lg:text-[3rem]">
@@ -19,8 +20,13 @@ import SecundaryButton from "@/components/common/buttons/SecundaryButton.astro";
       </p>
     </div>
     <div class="flex items-center justify-center mt-4 gap-3">
-      <PrimaryButton>una linea mas</PrimaryButton>
       <SecundaryButton>contribuir</SecundaryButton>
+      <PrimaryButton>una linea mas</PrimaryButton>
+    </div>
+    <div class="flex flex-col md:flex-row mt-5 lg:mt-10 lg:px-5 lg:gap-4">
+      <BlockSection aling="right" title="encuentra tu tema de interes en un solo lugar rapidamente">seguramente encuentres un tema que te llame la atencion dentro de una linea mas, revisa temas relacionados a tus gustos</BlockSection>
+      <BlockSection title="comparte tus conocimientos con la comunidad" isBlack>no solo puedes aprender y conocer nuevos temas de tu interés, también puedes ser parte de mucho mas</BlockSection>
+      <BlockSection aling="left" title="navega entre las lineas hasta encontrar lo que necesitas">encuentra tus temas de mayor interes facilmente buscando por las categorias que mas te gusten o explora nuevas tecnologías</BlockSection>
     </div>
   </main>
 </Layout>
