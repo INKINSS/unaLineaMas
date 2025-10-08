@@ -1,0 +1,48 @@
+---
+title: "React: La biblioteca de Javascript más importante"
+titleSideBar: "que es react"
+slug: "que-es-react"
+description: "aprende las características principales de la librería más popular de Javascript"
+readTime: "12 min"
+author: "unaLineaMas"
+datePulish: "29 de septiembre 2025"
+category: "frontend"
+---
+
+# React: La biblioteca de Javascript más importante
+
+<div class='flex gap-4 text-[1rem]'>
+<p>unaLineaMas ·   12 min ·   29 septiembre 2025 ·   frontend</p>
+</div>
+
+## ¿Qué es React?
+React es una biblioteca que utiliza javascript para crear interfaces de usuario del lado del cliente, es la visión y propósito principal que tiene esta herramienta según su sitio web [React](https://reactjs.org/). Es tener **una librería que muestre información del lado del ciente**, porque eso es, el propósito de react es mostrar una interfaz de usuario, el que trabaje con javascript lo hace una herramienta ideal y rápida para poder ser una buena opción de aprendizaje si es que te interesa el mundo del frontned.
+
+Aunque el propósito de react sea _mostrar información del lado del cliente_ puede llevarse mucho más allá, ya que al ser una librería se puede combinar con herramientas de terceros para poder sacar aún más su potencial, react como tal funciona a un "bajo nivel", sin embargo con herramientas externas como librería de componentes, enrutamiento, validaciones entre otras, hace que esta famosa librería sea mucho más completa y versatil al momento de saber qué herramientas incorporar al momento de usar.
+
+## ¿Porqué React?
+Aunque react no es el único camino de aprender cuando hablamos de herramientas de desarrollo del lado del ciente, si tiene algunas ventajas y cualidades que lo hacen una buena primera opción de aprenizaje en el mundo del frontend.
+
+### React trabaja con javascript
+React por defecto trabaja con javascript, esto es una gran ventaja ya que la mayoría de personas que les intersa el mundo del desarrollo llevan un poco de experiencia con este lenguaje, Al momento de querer aprender react la curva de aprendizaje será más fácil si llevan las bases de javascript o una idea, además de que varias (si no es que todas) las herramientas de terceros que se pueden añadir a react **funcionan con javascript**, esto hace que todo el entorno y herramientas funcionen bajo un solo lenguaje, lo que hace que sea mucho más fácil de digerir y aprender.
+
+Ahora, no todo es bueno al momento de mencioanr que _react trabaja con javascript_, porque justamente esa es un punto a considerar, al momento de usar javascript estamos dejando "el tipado" como algo de poco interés, lo que llevará que al momento de desarrollar nos encontremos con problemas de tipado y errores que son resultado de usar un lenguaje "tan liberal" como lo es javascript, en la actualidad puedes trabajar react con el lenguaje de typescript que justamente ayuda a evitar esos "problemas inesperados" al momento de desarrollar, pero claro, eso es aveces un obstáculo para aquellos que prefieren no aprender este lenguaje y solo prefieres tranbajar con javascript.
+
+**la recomendación es**: aprende react con javascript y luego, cuando tengas un concepto más amplio de la librería y del lenguaje de javascript aprendas a hacer lo mismo con typescript, verás una gran diferencia entre ambos mundos.
+
+### React tiene una gran comunidad y soporte
+Lanzado en 2013 por Facebook, react a lo largo de los años ha adquirido una gran comunidad y soporte en toda la extensión de la palabra, solo el repositorio de react tiene **más de 49 mil fork** y también **más de 230 mil favoritos**, aparte de ser creada por la empresa facebook y tenér miles (sino que millones) de personas que usan esta herramienta, esto hace que la comunidad y el soporte de esta biblioteca sea cada día más grande y sea una herramienta que persista a lo largo del tiempo sin miedo a que de un momento a otro termine desapareciendo.
+
+Puedes encontrar canales de discord, ayuda en foros e incluso en la misma documentación de la [pagina oficial](https://reactjs.org/docs/getting-started.html) de react cómo es que se trabaja con esta librería. En pocas palabras **no aprendas solo**, no te encierres y quieras encontrar la solución tu mismo, puedes encontrar ayuda o personas con tus mismos gustos e intereses con una disposición de ayudarte y compartir lo que ellos han aprendido a lo largo de su tiempo.
+
+### React te prepara para un framework
+En otro artículo más adelante se hablará entre la diferencia entre un framework y una libería o biblioteca, pero para que te de una idea, React te prepara para saber usar un framework como tal. y si estoy hablando de **NextJs**, NextJs es el framework que trabaja con react, este tiene todas las herramientas que comunmente buscarías por aparte para un proyecto que necesites hacer y que lo tengas que armar con react, ya que NextJs trae varias cualidades.
+
+- Enrutamiento de Páginas por carpetas (en react usarías react-router-dom)
+- Renderizado del lado del Servidor (SSR) (react lo hace del lado del ciente, CSR)
+- Generación de sitios estáticos (SSG), react todo lo genera en el navegador
+- Trabajar con APis, (en react trabajaría con un framework aparte como lo es express)
+- Carga de páginas en segundo plano para mejor navegación (en react se hace manualmente)
+
+## Entonces, ¿Vale la pena aprender React?
+como ves, todo es ventaja, pero ojo también **no es el unico camino**, esta es una gran herramienta cuando tienes en mente una herramienta para generar interfaces de usuario más no la única, si bien la curva de aprendizaje de react es moderadamente fácil, existen otras que lo son aún más y en su concepto "más versátilies", por ejemplo el caso de [Astro](https://astro.build/). este es un framework como tal que trabaja de manera agnóstica, en otras palabras, da igual si usas react o no, el trabajará con la herramienta que tu quieras, otra opción viable es aprender [VueJs](https://vuejs.org/). este también es un framework pero su curva de aprendizaje es mucho más fácil que react, ya que la sintaxis que usar para trabajar con javascript lo hace muy fácil de aprender. Como ves tienes muchos caminos para aprender tu próxima herramienta basada en javascript, al menos hoy aprendiste, en una línea más lo que es la librería de React.
