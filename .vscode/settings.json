@@ -5,6 +5,7 @@
         "layout",
         "styles",
         "component",
-        "page"
+        "page",
+        "articles"
     ]
 }
