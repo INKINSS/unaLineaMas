@@ -3,7 +3,9 @@ import NavLink from '@/components/common/navLink/NavLink.astro'
 ---
 
 <header class="flex justify-between">
-    <a href="/" class="text-gray font-medium text-sm">unaLineaMas</a>
+    <div class="flex items-start">
+        <a href="/" class="text-gray font-medium text-sm">unaLineaMas</a>
+    </div>
     <nav>
         <ul class="flex flex-col items-end font-medium gap-1 text-gray">
             <li><NavLink exact href="/" activeClass='opacity-100 underline-offset-4 underline active text-gray' class='opacity-70 hover:underline-offset-4 hover:underline'>inicio</NavLink></li>
