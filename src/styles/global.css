@@ -7,6 +7,64 @@
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Variantes con diferentes duraciones */
+  .fade-in-fast {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  .fade-in-slow {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Variantes con delay */
+  .fade-in-delay-1 {
+    animation: fadeIn 0.5s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+  
+  .fade-in-delay-2 {
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .fade-in-delay-3 {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .fade-in-delay-4 {
+    animation: fadeIn 0.5s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+  
+  /* Sin movimiento vertical, solo opacidad */
+  .fade-in-simple {
+    animation: fadeInSimple 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInSimple {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 
 @theme {
