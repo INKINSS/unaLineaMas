@@ -20,7 +20,7 @@ const SideBar = ({ groupedArticles, children }: Props) => {
         <SidebarContent className="p-6">
             <SidebarGroup className="p-0">
                 <a href="/" className="text-gray font-medium text-sm px-0 no-underline">unaLineaMas</a>
-                <SidebarGroupContent>
+                <SidebarGroupContent className="mt-2">
                     <SidebarGroupContent className="px-3">
                         {Object.entries(groupedArticles).map(([category, articles]) => (
                             <SidebarGroupContent key={category}>
@@ -39,7 +39,7 @@ const SideBar = ({ groupedArticles, children }: Props) => {
             </SidebarGroup>
         </SidebarContent>
     </Sidebar>
-    <main className="mt-10 hide-scrollbar lg:px-5 pb-10">
+    <main className="mt-10 hide-scrollbar lg:px-5 pb-10 fade-in">
         {children}
     </main>
     </SidebarProvider>
