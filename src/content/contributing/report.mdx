@@ -1,0 +1,61 @@
+---
+title: 'crea un nuevo articulo para la comunidad'
+titleSideBar: 'crear articulo'
+slug: 'crea-articulo'
+category: articulo
+
+---
+
+import Structure from '@/components/structure/Structure.tsx'
+import CopyBlock from '@/components/common/copyBlock/CopyBlock.tsx'
+
+## Flujo de contribución (paso a paso)
+
+Genial! gracias por tomar la desición de contribuir y compartir tus conocmientos en _unaLineaMas_, a continuación se explica paso a paso como puedes el procedimiento para poder contribuir.
+
+### fork del repositorio
+antes que nada necesitas hacer un fork del repositorio, esto lo puedes hacer en el [siguiente enlace](https://github.com/INKINSS/unaLineaMas)
+
+### clona tu fork de manera local
+Haz un clon del fork que acabas de hacer en tu maquina local, puedes hacerlo usando el comando: _git clone https://github.com/tu-usuario/unaLineaMas.git_.
+
+Esto te permitirá trabajar de manera local en tu maquina para luego poder mandar tus cambios a la nube.
+
+### crea una nueva rama
+Trabaja en una rama aparte, dependiendo de cual sea tu tema de interés, puedes especificar el nombre de la rama con su categoría.
+
+**estructura de rama: categoría/tema**
+Ejemplo: _git switch -c frontend/astro_
+
+### crea tu articulo
+A continuación se te muestra la estructura de carpetas del proyecto y la manera en la que puedes crear tu articulo para un mejor orden y acceso.
+
+<div class='flex flex-col md:flex-row gap-5 items-center mt-5 mb-10'>
+<Structure />
+<section>
+    <strong>src</strong>
+    <p style={{margin:'0px'}}>carpeta principal</p>
+    <strong>frontend</strong>
+    <p style={{margin:'0px'}}>categoria para temas de frontend</p>
+    <strong>tu-contribucion.mdx</strong>
+    <p style={{margin:'0px'}}>tu contribucion en archivo .mdx</p>
+    <strong>otra categoria</strong>
+    <p style={{margin:'0px'}}>crea otra categoria si hace falta</p>
+</section>
+</div>
+
+### copia la plantilla de informacion requerida
+
+Ya que hayas decidido donde crear tu artículo y crear el archivo .mdx, necesitas copiar la plantilla con la información de tu articulo.
+
+<CopyBlock code={`---
+title: "Titulo de tu artículo"
+titleSideBar: "Título para el sidebar"
+slug: "nombre-entre-guiones"
+description: "Descripción corta del artículo"
+readTime: "5 min"
+author: "Nombre o nickname del autor"
+datePublish: "10 de octubre de 2025"
+category: "frontend"
+---`} language="yaml" />
+

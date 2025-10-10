@@ -3,8 +3,8 @@ import { glob } from 'astro/loaders';
 
 const articles = defineCollection({
     loader: glob({
-        pattern: '**/*.md',
-        base: './src/content',
+        pattern: '**/*.mdx',
+        base: './src/content/articles',
     }),
     schema: z.object({
         title: z.string().optional(),
@@ -18,6 +18,20 @@ const articles = defineCollection({
     }),
 });
 
+const contributing = defineCollection({
+    loader: glob({
+        pattern: '**/*.mdx',
+        base: './src/content/contributing',
+    }),
+    schema: z.object({
+        title: z.string().optional(),
+        slug: z.string().optional(),
+        titleSideBar: z.string().optional(),
+        category: z.string().optional(),
+    }),
+});
+
 export const collections = {
     articles,
+    contributing,
 };

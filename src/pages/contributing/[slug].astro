@@ -1,11 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
-import Layout from '@/layouts/Layout.astro';
-import SideBar from '@/components/sideBar/SideBar';
-import RedirectArticles from '@/components/common/navLink/RedirectArticles.astro';
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import SideBar from "@/components/sideBar/SideBar";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("articles");
+  const articles = await getCollection("contributing");
   return articles.map((article: any) => ({
     params: {
       slug: article.data.slug,
@@ -15,11 +14,11 @@ export async function getStaticPaths() {
     },
   }));
 }
-const path = "articles";
+
 const { article } = Astro.props;
 const { Content } = await render(article);
 
-const articles = await getCollection("articles");
+const articles = await getCollection("contributing");
 
 const groupedArticles = articles.reduce<
   Record<string, Array<{ titleSideBar: string; slug: string }>>
@@ -38,10 +37,11 @@ const groupedArticles = articles.reduce<
 ---
 
 <Layout>
-    <article class="prose max-w-[90%] prose-lg prose-h1:mb-0 prose-p:mt-2 prose-h2:mt-2 prose-h2:mb-2 prose-h3:mt-2 prose-h3:mb-2 prose-p:text-balance prose-h1:text-[2.5rem]">
-        <SideBar client:only groupedArticles={groupedArticles}>
-            <Content />
-            <RedirectArticles />
-        </SideBar>
-    </article>
+  <article
+    class="prose max-w-[90%] prose-lg prose-h1:mb-0 prose-p:mt-2 prose-h2:mt-2 prose-h2:mb-2 prose-h3:mt-2 prose-h3:mb-2 prose-p:text-balance prose-h1:text-[2.5rem]"
+  >
+    <SideBar client:only groupedArticles={groupedArticles}>
+      <Content />
+    </SideBar>
+  </article>
 </Layout>
