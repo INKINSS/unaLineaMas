@@ -52,7 +52,7 @@ const SideBar = ({ groupedArticles, children }: Props) => {
                           <a
                             href={`/${basePath}/${article.slug}`}
                             className={
-                              currentPath === `/${basePath}${article.slug}`
+                              currentPath === `/${basePath}/${article.slug}`
                                 ? "text-gray text-sm px-0 underline font-normal"
                                 : "text-gray text-sm px-0 no-underline hover:underline font-normal"
                             }
