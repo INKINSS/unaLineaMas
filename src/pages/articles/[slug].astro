@@ -5,40 +5,41 @@ import SideBar from '@/components/sideBar/SideBar';
 import RedirectArticles from '@/components/common/navLink/RedirectArticles.astro';
 
 export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((article: any) => ({
-    params: {
-      slug: article.data.slug,
-    },
-    props: {
-      article,
-    },
-  }));
+    const articles = await getCollection('articles');
+    return articles.map((article: any) => ({
+        params: {
+            slug: article.data.slug,
+        },
+        props: {
+            article,
+        },
+    }));
 }
-const path = "articles";
 const { article } = Astro.props;
 const { Content } = await render(article);
 
-const articles = await getCollection("articles");
+const articles = await getCollection('articles');
 
 const groupedArticles = articles.reduce<
-  Record<string, Array<{ titleSideBar: string; slug: string }>>
+    Record<string, Array<{ titleSideBar: string; slug: string }>>
 >((acc, article) => {
-  const category = article.data.category || "Sin categoría";
-  if (!acc[category]) acc[category] = [];
+    const category = article.data.category || 'Sin categoría';
+    if (!acc[category]) acc[category] = [];
 
-  acc[category].push({
-    titleSideBar:
-      article.data.titleSideBar || article.data.title || "Sin título",
-    slug: article.data.slug || "",
-  });
+    acc[category].push({
+        titleSideBar:
+            article.data.titleSideBar || article.data.title || 'Sin título',
+        slug: article.data.slug || '',
+    });
 
-  return acc;
+    return acc;
 }, {});
 ---
 
 <Layout>
-    <article class="prose max-w-[90%] prose-lg prose-h1:mb-0 prose-p:mt-2 prose-h2:mt-2 prose-h2:mb-2 prose-h3:mt-2 prose-h3:mb-2 prose-p:text-balance prose-h1:text-[2.5rem]">
+    <article
+        class="prose md:max-w-[85%] prose-lg prose-p:text-pretty prose-h1:mb-0 prose-p:mt-2 prose-h2:my-2 prose-h3:my-2 prose-h1:text-[2rem] prose-h2:text-[1.5rem]"
+    >
         <SideBar client:only groupedArticles={groupedArticles}>
             <Content />
             <RedirectArticles />
