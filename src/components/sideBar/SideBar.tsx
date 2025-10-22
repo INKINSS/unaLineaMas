@@ -48,7 +48,7 @@ const SideBar = ({ groupedArticles, children }: Props) => {
                     </SidebarGroupLabel>
                     <SidebarGroupContent>
                       {articles.map((article) => (
-                        <SidebarGroupContent key={article.slug}>
+                        <SidebarGroupContent key={article.slug} className="mb-2">
                           <a
                             href={`/${basePath}/${article.slug}`}
                             className={
