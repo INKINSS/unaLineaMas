@@ -2,27 +2,30 @@
 import Layout from '@/layouts/Layout.astro';
 import SideBar from '@/components/sideBar/SideBar';
 import { getCollection } from 'astro:content';
+import RecentArticleCard from '@/components/cardArticle/RecentArticleCard.astro';
 
 const articles = await getCollection('articles');
-
-const groupedArticles = articles.reduce<Record<string, Array<{titleSideBar: string, slug: string}>>>((acc, article) => {
+const groupedArticles = articles.reduce<
+    Record<string, Array<{ titleSideBar: string; slug: string }>>
+>((acc, article) => {
     const category = article.data.category || 'Sin categoría';
     if (!acc[category]) acc[category] = [];
-    
+
     acc[category].push({
-        titleSideBar: article.data.titleSideBar || article.data.title || 'Sin título',
-        slug: article.data.slug || ""
+        titleSideBar:
+            article.data.titleSideBar || article.data.title || 'Sin título',
+        slug: article.data.slug || '',
     });
-    
+
     return acc;
 }, {});
-
 ---
 
 <Layout>
     <div class="flex flex-col">
         <SideBar client:only groupedArticles={groupedArticles}>
-            <h1>Artículos</h1>
+            <h1 class="mb-5 font-semibold text-2xl">Artículos añadidos recientemente</h1>
+            <RecentArticleCard articles={articles.filter((article) => article.data.isRecent)} />
         </SideBar>
     </div>
 </Layout>
