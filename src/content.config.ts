@@ -11,6 +11,7 @@ const articles = defineCollection({
         titleSideBar: z.string().optional(),
         description: z.string().optional(),
         slug: z.string().optional(),
+        isRecent: z.boolean().optional(),
         readTime: z.string().optional(),
         author: z.string().optional(),
         category: z.string().optional(),
