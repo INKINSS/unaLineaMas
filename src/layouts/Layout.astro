@@ -1,35 +1,36 @@
 ---
-import Background from "../components/background/Background.astro"
-import Header from "../components/header/Header.astro"
+import Background from "../components/background/Background.astro";
+import Header from "../components/header/Header.astro";
 import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="/src/styles/global.css">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>unaLineaMas</title>
-		<ClientRouter />
-	</head>
-	<body class="p-6">
-        <Header />
-        <Background />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>unaLineaMas</title>
+    <ClientRouter />
+  </head>
+  <body class="p-6">
+    <Header />
+    <Background />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-    *{
-        box-sizing: border-box;
-    }
-	html, body {
-		width: 100%;
-		height: 100dvh;
-		color: rgb(32,32,32);
-        scrollbar-width: none;
-	}
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100dvh;
+    color: rgb(32, 32, 32);
+    scrollbar-width: none;
+  }
 </style>
