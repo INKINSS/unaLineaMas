@@ -22,7 +22,22 @@ const groupedArticles = articles.reduce<Record<string, Array<{titleSideBar: stri
 <Layout>
     <div class="flex flex-col">
         <SideBar client:only groupedArticles={groupedArticles}>
-            <h1>Contributing</h1>
+            <section class="prose md:max-w-[85%] prose-lg prose-p:text-pretty prose-h1:mb-0 prose-p:mt-2 prose-h2:my-2 prose-h3:my-2 prose-h1:text-[2rem] prose-h2:text-[1.5rem]">
+                <h1>Gracias por tu contribución</h1>
+                <p>Tu aporte es valioso para nuestra comunidad. Al contribuir, ayudas a enriquecer el contenido y a compartir conocimientos con otros.</p>
+                <h2>¿Qué necesito para contribuir?</h2>
+                <p>Para contribuir, solo necesitas tener ganas de colaborar y seguir las pautas establecidas en cada área. No es necesario ser un experto, ¡todas las manos son bienvenidas!</p>
+                <h2>áreas en las que puedes contribuir</h2>
+                <p>Existen diversas formas en las que puedes aportar:</p>
+                <ul>
+                    <li><a href="/contributing/create-article">Escribir artículos</a> sobre temas relevantes y actuales.</li>
+                    <li><a href="/contributing/revisa-articulo">Revisar artículos</a> existentes para asegurar su calidad.</li>
+                    <li><a href="/contributing/compartir-recursos">Compartir recursos</a> útiles y herramientas relacionadas con la programación y el desarrollo.</li>
+                </ul>
+                <p>puedes encontrar más información sobre cómo contribuir en la guia de contribución de cada área disponible, encontrarás una serie de pasos a seguir para facilitar tu colaboración.</p>
+                <h2>¿puedo elegir cualquier tema de interes?</h2>
+                <p>Sí, puedes elegir cualquier tema de interés dentro del ámbito de la programación y el desarrollo. Te animamos a explorar áreas que te apasionen y en las que puedas aportar valor.</p>
+            </section>
         </SideBar>
     </div>
 </Layout>
